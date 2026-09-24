@@ -38,6 +38,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.add_button = new System.Windows.Forms.Button();
+            this.user_id = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.delete_button = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,7 +122,7 @@
             // 
             // add_button
             // 
-            this.add_button.Location = new System.Drawing.Point(37, 136);
+            this.add_button.Location = new System.Drawing.Point(37, 162);
             this.add_button.Name = "add_button";
             this.add_button.Size = new System.Drawing.Size(75, 23);
             this.add_button.TabIndex = 9;
@@ -127,11 +130,41 @@
             this.add_button.UseVisualStyleBackColor = true;
             this.add_button.Click += new System.EventHandler(this.add_button_Click);
             // 
+            // user_id
+            // 
+            this.user_id.Location = new System.Drawing.Point(105, 136);
+            this.user_id.Name = "user_id";
+            this.user_id.ReadOnly = true;
+            this.user_id.Size = new System.Drawing.Size(138, 20);
+            this.user_id.TabIndex = 10;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(37, 143);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "ID";
+            // 
+            // delete_button
+            // 
+            this.delete_button.Location = new System.Drawing.Point(118, 162);
+            this.delete_button.Name = "delete_button";
+            this.delete_button.Size = new System.Drawing.Size(75, 23);
+            this.delete_button.TabIndex = 12;
+            this.delete_button.Text = "Delete";
+            this.delete_button.UseVisualStyleBackColor = true;
+            this.delete_button.Click += new System.EventHandler(this.delete_button_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 450);
+            this.Controls.Add(this.delete_button);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.user_id);
             this.Controls.Add(this.add_button);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -163,6 +196,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button add_button;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox user_id;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button delete_button;
     }
 }
 

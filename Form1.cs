@@ -22,7 +22,16 @@ namespace CRUD
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = dataGridView1.Rows[e.RowIndex];
+                name.Text = row.Cells["name"].Value.ToString();
+                user_id.Text = row.Cells["id"].Value.ToString();
+                phone.Text = row.Cells["phone"].Value.ToString();
+                email.Text = row.Cells["email"].Value.ToString();
+                department.Text = row.Cells["department"].Value.ToString();
 
+            }
         }
 
         private void load_students()
@@ -63,6 +72,13 @@ namespace CRUD
             con.Close();
             MessageBox.Show("Student added successfully!");
             load_students();
+        }
+
+        private void delete_button_Click(object sender, EventArgs e)
+        {
+            // Get ID from TextBox. Store it in a variable. Write Query, Execute query like insert. 
+            // Show a message box showing that record is deleted successfully
+            // Call load_students(). But before remember to close connection to escape exception.
         }
     }
 }
